@@ -13,47 +13,7 @@ bool sector_check(std::vector<int> sectors_complete, int sector) {
 
 std::string answer_define(int sector) {
 	std::string answer_file_path, answer_str;
-	switch (sector) {
-		case 1:
-			answer_file_path = "F:\\__C++\\Skillbox\\19\\19.5.5\\Files\\answer_1.txt";
-			break;
-		case 2:
-			answer_file_path = "F:\\__C++\\Skillbox\\19\\19.5.5\\Files\\answer_2.txt";
-			break;
-		case 3:
-			answer_file_path = "F:\\__C++\\Skillbox\\19\\19.5.5\\Files\\answer_3.txt";
-			break;
-		case 4:
-			answer_file_path = "F:\\__C++\\Skillbox\\19\\19.5.5\\Files\\answer_4.txt";
-			break;
-		case 5:
-			answer_file_path = "F:\\__C++\\Skillbox\\19\\19.5.5\\Files\\answer_5.txt";
-			break;
-		case 6:
-			answer_file_path = "F:\\__C++\\Skillbox\\19\\19.5.5\\Files\\answer_6.txt";
-			break;
-		case 7:
-			answer_file_path = "F:\\__C++\\Skillbox\\19\\19.5.5\\Files\\answer_7.txt";
-			break;
-		case 8:
-			answer_file_path = "F:\\__C++\\Skillbox\\19\\19.5.5\\Files\\answer_8.txt";
-			break;
-		case 9:
-			answer_file_path = "F:\\__C++\\Skillbox\\19\\19.5.5\\Files\\answer_9.txt";
-			break;
-		case 10:
-			answer_file_path = "F:\\__C++\\Skillbox\\19\\19.5.5\\Files\\answer_10.txt";
-			break;
-		case 11:
-			answer_file_path = "F:\\__C++\\Skillbox\\19\\19.5.5\\Files\\answer_11.txt";
-			break;
-		case 12:
-			answer_file_path = "F:\\__C++\\Skillbox\\19\\19.5.5\\Files\\answer_12.txt";
-			break;
-		case 13:
-			answer_file_path = "F:\\__C++\\Skillbox\\19\\19.5.5\\Files\\answer_13.txt";
-			break;
-	}
+	answer_file_path = ("F:\\__C++\\Skillbox\\19\\19.5.5\\Files\\answer_") + std::to_string(sector) + (".txt");
 	std::ifstream answer_file;
 	answer_file.open(answer_file_path);
 	answer_file >> answer_str;
